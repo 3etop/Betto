@@ -8,9 +8,9 @@
 </head>
 <body>
     <!-- Sección para modo noche -->
-    <section id="modo-noche" class="presentacion modo-noche">
+    <section id="modo-noche" class="presentacion modo-noche" style="transform: scale(0.8); margin-top: -50px;">
         <h1>Betto R.</h1>
-        <img src="../../src/Image/Beto.png" alt="Imagen de presentación modo-noche" class="imagen-presentacion">
+        <img src="../../src/Image/Beto.png" alt="Imagen de presentación modo-noche" class="imagen-presentacion" loading="lazy">
         <p class="titulo">Frontend Developer</p>
         <p class="descripcion">
             Desarrollador web con conocimientos en HTML, CSS y JavaScript, usando tecnologías como React, Laravel y Node.js.
@@ -18,25 +18,12 @@
         <p>
             Realizo animaciones con GSAP, transiciones interactivas con Swiper.js y optimización de sitios web. Además, tengo experiencia en branding, diseño visual y gestión de proyectos.
         </p>
+        <div>
+            <a href="https://startling-sundae-fc9c22.netlify.app/" target="_blank" class="hoja">
+                <button>Hoja de Vida</button>
+            </a>
+        </div>
     </section>
-
-    <!-- Sección para modo día -->
-    <section id="modo-dia" class="presentacion modo-dia oculto">
-        <h1>Betto R.</h1>
-        <img src="../../src/Image/Beto.png" alt="Imagen de presentación modo-dia" class="imagen-presentacion">
-        <p class="titulo">Frontend Developer</p>
-        <p class="descripcion">
-            Desarrollador web con conocimientos en HTML, CSS y JavaScript, usando tecnologías como React, Laravel y Node.js.
-        </p>
-        <p>
-            Realizo animaciones con GSAP, transiciones interactivas con Swiper.js y optimización de sitios web. Además, tengo experiencia en branding, diseño visual y gestión de proyectos.
-        </p>
-    </section>
-
-    <div class="presentacion modo-dia">
-        <!-- Contenido -->
-    </div>
-
-    <script src="../../src/js/pagina-1.js"></script>
+    <script src="../../src/js/pagina-1.js" defer></script>
 </body>
 </html>

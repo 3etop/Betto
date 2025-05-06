@@ -1,0 +1,76 @@
+/* Estilos generales */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: -50px; /* Subir el contenido de main hacia arriba */
+}
+
+/* Título principal */
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de proyectos */
+ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    transform: scale(0.8); /* Reducir el tamaño al 80% */
+    transform-origin: center; /* Mantener el centro como punto de referencia */
+}
+
+ul li {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas en pantallas grandes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: -80px; /* Subir aún más el contenido hacia arriba */
+}
+
+ul li img {
+    margin-top: 20px;
+    width: clamp(200px, 100%, 400px); /* Ajuste de tamaño más flexible */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid aquamarine; /* Añadido grosor al borde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos */
+}
+
+ul li:hover img {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+ul li a {
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 30px;
+}
+
+ul li p {
+    font-size: clamp(0.8rem, 2vw, 1.2rem) !important; /* Reducir el tamaño de fuente */
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+}

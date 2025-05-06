@@ -1,0 +1,124 @@
+.stacked-images {
+    display: flex;
+    gap: 10px !important; /* Reduce el espacio entre las imágenes */
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    max-width: 80%; /* Reduce el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    position: fixed; /* Fija el contenedor para que siempre sea visible */
+    bottom: 0; /* Asegura que esté en la parte inferior del viewport */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color: #fff; /* Fondo blanco para mayor visibilidad */
+    padding: 5px; /* Reduce el padding */
+    scrollbar-width: thick; /* Para navegadores compatibles con scrollbar-width */
+    scrollbar-color: #ff5722 #ddd; /* Color del scroll y del fondo */
+    -webkit-overflow-scrolling: touch; /* Habilita el desplazamiento suave en dispositivos móviles */
+}
+
+.stacked-images .image {
+    cursor: pointer;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+    width: clamp(150px, 20vw, 200px); /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    position: relative; /* Permite que la imagen se posicione correctamente */
+}
+
+.stacked-images .image:active {
+    cursor: pointer;
+    transform: scale(5.1); /* Escalado al hacer click */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    z-index: 10; /* Asegura que la imagen esté por encima de otras */
+    position: fixed; /* Cambiado a fixed para que salga de la barra de scroll */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%) scale(3.1); /* Ajusta la posición al centro */
+}
+
+.stacked-images::-webkit-scrollbar {
+    height: 16px; /* Aumenta la altura del scroll horizontal */
+}
+
+.stacked-images::-webkit-scrollbar-thumb {
+    background-color: #ff5722; /* Color llamativo para el scroll */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.stacked-images::-webkit-scrollbar-track {
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.pagina-4 {
+    margin-top: -170px !important; /* Se ajusta el margen superior para subir más el contenido */
+    padding-top: 0 !important; /* Se asegura que no haya padding superior */
+}
+
+.image-viewer {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Asegura que esté por encima de otros elementos */
+}
+
+.image-viewer.active {
+    display: flex; /* Muestra el contenedor cuando está activo */
+}
+
+.viewer-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001; /* Asegura que esté por encima de la imagen */
+}
+
+ul {
+    padding: 20px; /* Incrementar el espacio interno del contenedor de la lista */
+    margin: 30px 0; /* Incrementar el espacio superior e inferior */
+    list-style-type: none;
+    font-size: clamp(0.4rem, 1vw, 0.6rem); /* Tamaño de fuente extremadamente pequeño */
+    line-height: clamp(0.6rem, 1.2vw, 0.8rem); /* Altura de línea ajustada */
+}
+
+li {
+    margin-bottom: 60px; /* Incrementar el espacio entre elementos de la lista */
+    padding: 20px; /* Ajustar el espacio interno de cada elemento */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: clamp(0.8rem, 1.5vw, 1rem); /* Aumenta el tamaño de la fuente */
+    line-height: clamp(1rem, 2vw, 1.4rem); /* Ajusta la altura de línea */
+}
+
+li:hover {
+    transform: scale(1.05); /* Escalado al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+p {
+    font-size: 1em !important; /* Disminuye el tamaño del texto */
+    line-height: 1.4; /* Ajusta la altura de línea para mejor legibilidad */
+}
